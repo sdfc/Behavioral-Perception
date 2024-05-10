@@ -1,6 +1,17 @@
 # 行为预测及Moveit避障处理
 ## 1.基于PEC数据集的训练与评估（CoAx数据集同理）
-......
+### 1.1 PEC数据集动作编码表
+<br/>
+    <img width="600" src="./动作编码.png"> 
+
+### 1.2 pec程序含义(CoAx同理)
+```
+pec_train.py     --按照1.1分类训练Resnet-RNN网络
+pec_eval.py      --评估Resnet-RNN网络检测效果
+pec_result.txt   --包含了各项评估数据
+pec_result.json  --包含了1.1中14类动作的分类检测指标
+```
+程序直接运行即可
 
 ## 2.实时检测并调用Moveit进行避障路径规划
 ### 2.1 包含三个程序文件：
